@@ -3,11 +3,6 @@
 
 struct ScrabbleScoreTestSuite {};
 
-TEST(ScrabbleScoreTestSuite, dummyTest)
-{
-  ASSERT_TRUE(false);
-}
-
 TEST(ScrabbleScoreTestSuite, oneChar)
 {
   ASSERT_EQ(getScoreFromScrabble("a"), 1);
