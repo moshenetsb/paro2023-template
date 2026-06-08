@@ -3,11 +3,6 @@
 
 struct DayOfYearTestSuite {};
 
-TEST(DayOfYearTestSuite, dummyTest)
-{
-  ASSERT_TRUE(false);
-}
-
 TEST(DayOfYearTestSuite, January1stIsFirstDayOfYear)
 {
   ASSERT_EQ(dayOfYear(1, 1, 2020), 1);
