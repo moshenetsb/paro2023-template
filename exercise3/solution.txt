@@ -1,0 +1,31 @@
+User scenarios:
+1. Roll a die and move: As a player, when it is my turn I can roll a die so that my token moves forward on the board by the number on the die
+2. Buy free property: As a player, when my token lands on free property I can buy it so that I can collect rent from other players
+3. Pay rent: As a player, I can automatically pay rent to other players when my token lands on their property
+4. Go to jail: As a player, I can be sent directly to jail when my token lands on the "go to jail" field, which ends my turn immediately and makes me skip 3 turns
+
+Acceptance tests:
+1.
+GIVEN it is player's turn and their token is on the "go" field
+WHEN the player rolls a die and gets 3
+THEN the player's token moves forward 3 spaces
+
+2. 
+GIVEN player's token lands on free property and it costs 400$
+AND the player has a balance of 1500$
+WHEN the player chooses to buy the property
+THEN the player should be registered as the owner of the property
+AND player's balance decreases to 1100$
+
+3.
+GIVEN player 1's token lands on a "mansion X" field, which currently has 35$ rent
+AND player 2 owns "mansion X"
+WHEN player 1's token lands on "mansion X"
+THEN player 1's balance decreases by 35$
+AND player 2's balance increases by 35$
+
+4.
+GIVEN player's token is on a field 29
+AND player's token moves forward by 1 spaces
+WHEN player's token lands on "go to jail" field (field 30)
+THEN player's token is moved to the "in jail" field and player's turn immediately ends
